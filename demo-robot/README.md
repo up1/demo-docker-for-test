@@ -38,4 +38,5 @@ Open Browser
 Run
 ```
 docker compose up robot
+docker compose up robot --abort-on-container-exit
 ```
