@@ -3,6 +3,8 @@ services:
     image: test:1.0.0
     build: .
     container_name: robot
+    volumes:
+      - ./my_reports:/reports
 
   # For M1, M2, M3
   hub:
@@ -18,7 +20,7 @@ services:
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
 
-  # For Linux/ Windows + AMD 64
+  ## For Linux/ Windows + AMD 64
   # hub:
   #   image: selenium/hub:4.22.0-20240621
   #   container_name: selenium-hub
